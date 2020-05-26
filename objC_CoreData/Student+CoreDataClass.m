@@ -35,6 +35,14 @@
     
 }
 
+- (BOOL)validateForDelete:(NSError *__autoreleasing  _Nullable *)error {
+    
+    NSLog(@"Student validate for delete");
+    
+    return YES;
+    
+}
+
 //- (BOOL)validateLastName:(id  _Nullable __autoreleasing *)value error:(NSError *__autoreleasing  _Nullable *)error {
 //
 //    *error = [NSError errorWithDomain:@"BAD LAST NAME" code:123 userInfo:nil];

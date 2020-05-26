@@ -20,6 +20,12 @@
 		B13898A52476B7260095ACB8 /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B13898A32476B7260095ACB8 /* Student+CoreDataClass.m */; };
 		B13898A62476B7260095ACB8 /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B13898A42476B7260095ACB8 /* Student+CoreDataProperties.m */; };
 		B13898A82476DEA70095ACB8 /* names.json in Resources */ = {isa = PBXBuildFile; fileRef = B13898A72476DEA70095ACB8 /* names.json */; };
+		B18231B2247BE7AB00C60E3E /* Car+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B18231B0247BE7AB00C60E3E /* Car+CoreDataClass.m */; };
+		B18231B3247BE7AB00C60E3E /* Car+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B18231B1247BE7AB00C60E3E /* Car+CoreDataProperties.m */; };
+		B1B31183247D1216004F50A5 /* Object+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B31181247D1215004F50A5 /* Object+CoreDataClass.m */; };
+		B1B31184247D1216004F50A5 /* Object+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B31182247D1215004F50A5 /* Object+CoreDataProperties.m */; };
+		B1B31189247D15FD004F50A5 /* University+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B31187247D15FD004F50A5 /* University+CoreDataClass.m */; };
+		B1B3118A247D15FD004F50A5 /* University+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B31188247D15FD004F50A5 /* University+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,18 @@
 		B13898A32476B7260095ACB8 /* Student+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataClass.m"; sourceTree = "<group>"; };
 		B13898A42476B7260095ACB8 /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B13898A72476DEA70095ACB8 /* names.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = names.json; sourceTree = "<group>"; };
+		B18231AE247BE7AB00C60E3E /* Car+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Car+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B18231AF247BE7AB00C60E3E /* Car+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Car+CoreDataClass.h"; sourceTree = "<group>"; };
+		B18231B0247BE7AB00C60E3E /* Car+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Car+CoreDataClass.m"; sourceTree = "<group>"; };
+		B18231B1247BE7AB00C60E3E /* Car+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Car+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B1B3117F247D1215004F50A5 /* Object+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Object+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B1B31180247D1215004F50A5 /* Object+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Object+CoreDataClass.h"; sourceTree = "<group>"; };
+		B1B31181247D1215004F50A5 /* Object+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Object+CoreDataClass.m"; sourceTree = "<group>"; };
+		B1B31182247D1215004F50A5 /* Object+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Object+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B1B31185247D15FD004F50A5 /* University+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "University+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B1B31186247D15FD004F50A5 /* University+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "University+CoreDataClass.h"; sourceTree = "<group>"; };
+		B1B31187247D15FD004F50A5 /* University+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "University+CoreDataClass.m"; sourceTree = "<group>"; };
+		B1B31188247D15FD004F50A5 /* University+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "University+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +112,18 @@
 		B138985D24766FE50095ACB8 = {
 			isa = PBXGroup;
 			children = (
+				B1B31185247D15FD004F50A5 /* University+CoreDataProperties.h */,
+				B1B31186247D15FD004F50A5 /* University+CoreDataClass.h */,
+				B1B31187247D15FD004F50A5 /* University+CoreDataClass.m */,
+				B1B31188247D15FD004F50A5 /* University+CoreDataProperties.m */,
+				B1B3117F247D1215004F50A5 /* Object+CoreDataProperties.h */,
+				B1B31180247D1215004F50A5 /* Object+CoreDataClass.h */,
+				B1B31181247D1215004F50A5 /* Object+CoreDataClass.m */,
+				B1B31182247D1215004F50A5 /* Object+CoreDataProperties.m */,
+				B18231AE247BE7AB00C60E3E /* Car+CoreDataProperties.h */,
+				B18231AF247BE7AB00C60E3E /* Car+CoreDataClass.h */,
+				B18231B0247BE7AB00C60E3E /* Car+CoreDataClass.m */,
+				B18231B1247BE7AB00C60E3E /* Car+CoreDataProperties.m */,
 				B13898A12476B7260095ACB8 /* Student+CoreDataProperties.h */,
 				B13898A22476B7260095ACB8 /* Student+CoreDataClass.h */,
 				B13898A32476B7260095ACB8 /* Student+CoreDataClass.m */,
@@ -284,13 +314,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18231B2247BE7AB00C60E3E /* Car+CoreDataClass.m in Sources */,
 				B138987F24766FE70095ACB8 /* main.m in Sources */,
 				B13898A52476B7260095ACB8 /* Student+CoreDataClass.m in Sources */,
+				B1B31189247D15FD004F50A5 /* University+CoreDataClass.m in Sources */,
+				B18231B3247BE7AB00C60E3E /* Car+CoreDataProperties.m in Sources */,
 				B138987124766FE50095ACB8 /* ViewController.m in Sources */,
+				B1B31184247D1216004F50A5 /* Object+CoreDataProperties.m in Sources */,
 				B138986B24766FE50095ACB8 /* AppDelegate.m in Sources */,
 				B138987724766FE50095ACB8 /* objC_CoreData.xcdatamodeld in Sources */,
 				B13898A62476B7260095ACB8 /* Student+CoreDataProperties.m in Sources */,
+				B1B31183247D1216004F50A5 /* Object+CoreDataClass.m in Sources */,
 				B138986E24766FE50095ACB8 /* SceneDelegate.m in Sources */,
+				B1B3118A247D15FD004F50A5 /* University+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

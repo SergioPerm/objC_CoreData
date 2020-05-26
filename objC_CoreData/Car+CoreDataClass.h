@@ -1,8 +1,8 @@
 //
-//  Student+CoreDataClass.h
+//  Car+CoreDataClass.h
 //  objC_CoreData
 //
-//  Created by kluv on 21/05/2020.
+//  Created by kluv on 25/05/2020.
 //  Copyright © 2020 com.kluv.hw24. All rights reserved.
 //
 //
@@ -11,12 +11,14 @@
 #import <CoreData/CoreData.h>
 #import "Object+CoreDataClass.h"
 
+@class Student;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Student : Object
+@interface Car : Object
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Student+CoreDataProperties.h"
+#import "Car+CoreDataProperties.h"
