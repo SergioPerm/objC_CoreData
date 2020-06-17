@@ -1,7 +1,8 @@
 #import "SceneDelegate.h"
 #import "AppDelegate.h"
+#import "UniversityViewController.h"
 
-@interface SceneDelegate ()
+@interface SceneDelegate () <UIWindowSceneDelegate, UISplitViewControllerDelegate>
 
 @end
 
@@ -12,6 +13,28 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    
+    UniversityViewController *viewController = [[UniversityViewController alloc] init];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.windowScene = (UIWindowScene *)scene;
+    self.window.rootViewController = [[UINavigationController alloc]
+                         initWithRootViewController:viewController];
+   
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+//    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+//    UINavigationController *navigationController = splitViewController.viewControllers.lastObject;
+//    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+//    navigationController.topViewController.navigationItem.leftItemsSupplementBackButton = YES;
+//    splitViewController.delegate = self;
+//
+//    UINavigationController *universityNavigationController = splitViewController.viewControllers[0];
+//    UniversityViewController *controller = (UniversityViewController *)universityNavigationController.topViewController;
+//    controller.managedObjectContext = controller.managedObjectContext;
+    
 }
 
 
@@ -47,8 +70,19 @@
     // to restore the scene back to its current state.
 
     // Save changes in the application's managed object context when the application transitions to the background.
-    [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
+    [[DataManager shareManager] saveContext];
 }
+
+#pragma mark - Split view
+
+//- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+//    if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[DetailViewController class]] && ([(DetailViewController *)[(UINavigationController *)secondaryViewController topViewController] detailItem] == nil)) {
+//        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+//        return YES;
+//    } else {
+//        return NO;
+//    }
+//}
 
 
 @end

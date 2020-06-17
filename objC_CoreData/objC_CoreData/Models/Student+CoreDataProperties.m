@@ -21,5 +21,6 @@
 @dynamic score;
 @dynamic studentCar;
 @dynamic university;
+@dynamic course;
 
 @end

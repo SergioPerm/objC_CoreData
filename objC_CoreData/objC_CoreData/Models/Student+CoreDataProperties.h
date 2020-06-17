@@ -10,6 +10,7 @@
 #import "Student+CoreDataClass.h"
 #import "Car+CoreDataClass.h"
 #import "University+CoreDataClass.h"
+#import "Course+CoreDataClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +24,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) float score;
 @property (nullable, nonatomic, retain) Car *studentCar;
 @property (nullable, nonatomic, retain) University *university;
+@property (nullable, nonatomic, retain) NSSet<Course *> *course;
+
+@end
+
+@interface Student (CoreDataGeneratedAccessors)
+
+- (void)addCourseObject:(Course *)value;
+- (void)removeCourseObject:(Course *)value;
+- (void)addCourse:(NSSet<Course *> *)values;
+- (void)removeCourse:(NSSet<Course *> *)values;
 
 @end
 

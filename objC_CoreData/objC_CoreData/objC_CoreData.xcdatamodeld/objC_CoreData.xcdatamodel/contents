@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G3020" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G5033" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Car" representedClassName="Car" parentEntity="Object" syncable="YES">
         <attribute name="model" optional="YES" attributeType="String"/>
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="studentCar" inverseEntity="Student"/>
+    </entity>
+    <entity name="Course" representedClassName="Course" parentEntity="Object" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="course" inverseEntity="Student"/>
+        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University" inverseName="courses" inverseEntity="University"/>
+        <fetchedProperty name="bestStudents" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="Student" predicateString="score &gt; 3.5"/>
+        </fetchedProperty>
+        <fetchedProperty name="studentsWithmanyCourses" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="Student" predicateString="course.@count &gt; 4"/>
+        </fetchedProperty>
     </entity>
     <entity name="Object" representedClassName="Object" syncable="YES"/>
     <entity name="Student" representedClassName="Student" parentEntity="Object" syncable="YES">
@@ -10,17 +21,21 @@
         <attribute name="firstName" optional="YES" attributeType="String"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="score" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="students" inverseEntity="Course"/>
         <relationship name="studentCar" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Car" inverseName="owner" inverseEntity="Car"/>
         <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University" inverseName="students" inverseEntity="University"/>
     </entity>
     <entity name="University" representedClassName="University" parentEntity="Object" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Course" inverseName="university" inverseEntity="Course"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="university" inverseEntity="Student"/>
     </entity>
+    <fetchRequest name="FetchStudents" entity="Student" predicateString="score &gt; 3.3 AND score &lt;= 3.4"/>
     <elements>
         <element name="Car" positionX="10630.99609375" positionY="-5430.3359375" width="128" height="73"/>
-        <element name="Object" positionX="10482.515625" positionY="-5669.2890625" width="128" height="43"/>
-        <element name="Student" positionX="10267.92578125" positionY="-5505.12890625" width="182.8203125" height="133"/>
-        <element name="University" positionX="10017.46875" positionY="-5646.96875" width="128" height="73"/>
+        <element name="Course" positionX="9728.98046875" positionY="-5305.28515625" width="128" height="131"/>
+        <element name="Object" positionX="10278.625" positionY="-5621.8359375" width="128" height="43"/>
+        <element name="Student" positionX="10272.12109375" positionY="-5323.5" width="182.8203125" height="148"/>
+        <element name="University" positionX="9897.51171875" positionY="-5532.1875" width="128" height="88"/>
     </elements>
 </model>

@@ -17,5 +17,6 @@
 
 @dynamic name;
 @dynamic students;
+@dynamic courses;
 
 @end
